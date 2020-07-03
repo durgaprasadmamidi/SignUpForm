@@ -49,6 +49,7 @@
         android:id="@+id/emailEditText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:ems="10"
         android:hint="email id"
         android:inputType="none|textEmailAddress"
@@ -59,6 +60,7 @@
         android:id="@+id/passwordEditText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:ems="10"
         android:hint="password"
         android:inputType="textPersonName|textPassword"
@@ -69,6 +71,7 @@
         android:id="@+id/reenterPasswordEditText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:ems="10"
         android:hint="re-enter password"
         android:inputType="textPersonName|textPassword|textEmailAddress"
@@ -81,7 +84,7 @@
         android:layout_height="wrap_content"
         android:text="invalid name"
         android:textColor="#FF0000"
-        android:visibility="invisible"
+        android:visibility="gone"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/guideline3" />
 
@@ -92,7 +95,7 @@
         android:layout_marginTop="15dp"
         android:text="invalid email"
         android:textColor="#FF0000"
-        android:visibility="invisible"
+        android:visibility="gone"
         app:layout_constraintStart_toEndOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/nameEditText" />
 
@@ -110,7 +113,7 @@
         android:layout_marginTop="15dp"
         android:text="invalid password"
         android:textColor="#FF0000"
-        android:visibility="invisible"
+        android:visibility="gone"
         app:layout_constraintStart_toEndOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/emailEditText" />
 
@@ -121,7 +124,7 @@
         android:layout_marginTop="15dp"
         android:text="password doesn't match"
         android:textColor="#FF0000"
-        android:visibility="invisible"
+        android:visibility="gone"
         app:layout_constraintStart_toEndOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/passwordEditText" />
 
@@ -143,7 +146,7 @@
         app:layout_constraintTop_toBottomOf="@+id/reenterPasswordEditText" />
 
     <RadioGroup
-        android:id="@+id/radioGroup"
+        android:id="@+id/genderRadioGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="2dp"
@@ -179,7 +182,7 @@
         android:layout_marginTop="8dp"
         android:text="country"
         app:layout_constraintStart_toEndOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+        app:layout_constraintTop_toBottomOf="@+id/genderRadioGroup" />
 
     <Spinner
         android:id="@+id/countrySpinner"
@@ -189,7 +192,7 @@
         android:layout_marginTop="8dp"
         android:entries="@array/countryNames"
         app:layout_constraintStart_toEndOf="@+id/countryTextView"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+        app:layout_constraintTop_toBottomOf="@+id/genderRadioGroup" />
 
     <Button
         android:id="@+id/submitButton"
@@ -231,10 +234,10 @@
         app:layout_constraintGuide_begin="513dp" />
 
     <CheckBox
-        android:id="@+id/checkBox"
+        android:id="@+id/agreementCheckBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:checked="true"
+        android:checked="false"
         android:text="agree"
         app:layout_constraintBottom_toTopOf="@+id/guideline6"
         app:layout_constraintEnd_toEndOf="parent"
